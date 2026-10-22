@@ -1,0 +1,79 @@
+generated: '2026-10-21'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 5
+  own: 2
+  other_domain: 3
+  platform: 0
+  roles:
+  - api
+  - marketing
+  - other
+  - support
+  - website
+hosts:
+- host: api.com.au
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: api.com.au
+  role: api
+  relation: other-domain
+- host: harveynorman.com.au
+  found_by:
+  - pointer
+  - probed
+  - contract-discovery
+  - well-known
+  types:
+  - Website
+  serves: []
+  registrable_domain: harveynorman.com.au
+  role: website
+  relation: own
+- host: www.harveynorman.com.au
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: harveynorman.com.au
+  role: other
+  relation: own
+- host: www.harveynormanholdings.com.au
+  found_by:
+  - pointer
+  - probed
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - InvestorRelations
+  - CompanyOverview
+  - Governance
+  - Support
+  - PrivacyPolicy
+  serves:
+  - cdn
+  platform: shopify.com
+  vendor: cloudflare
+  registrable_domain: harveynormanholdings.com.au
+  role: support
+  relation: other-domain
+- host: www.harveynormansupportcareers.com.au
+  found_by:
+  - pointer
+  - probed
+  - contract-discovery
+  - well-known
+  types:
+  - Careers
+  serves: []
+  registrable_domain: harveynormansupportcareers.com.au
+  role: marketing
+  relation: other-domain

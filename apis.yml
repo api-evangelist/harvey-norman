@@ -1,23 +1,99 @@
 aid: harvey-norman
+
 name: Harvey Norman
-description: 'Harvey Norman is a company surfaced via the API Evangelist harvest backlog (source: australia-apidays-2026)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Harvey Norman is an Australian retail brand for electrical, computers, furniture, bedding and homewares, operated
+  through a franchise system owned by Harvey Norman Holdings Limited (HNHL, ASX: HVN). According to the group''s own company
+  overview, HNHL is a public company listed on the Australian Securities Exchange that operates an integrated retail, franchise,
+  property and digital system across eight countries, and owns the Harvey Norman, Domayne and Joyce Mayne trademarks, licensing
+  them to independent franchisees in Australia. The consumer site harveynorman.com.au is fronted by an anti-bot challenge;
+  no public developer portal, API documentation or API contract has been found.'
+
 url: https://raw.githubusercontent.com/api-evangelist/harvey-norman/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:australia-apidays-2026
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-21 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-21'
+
 modified: '2026-10-21'
+
 tags:
 - Company
-apis: []
+- Retail
+- Consumer Electronics
+- Furniture
+- Franchising
+- Australia
+- E-Commerce
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
+image: https://www.harveynormanholdings.com.au/cdn/shop/t/12/assets/apple-touch-icon-hnholdings-1024x1024.png?v=119165569640335848231731463395
+
 common:
+- type: MCPServer
+  url: mcp/harvey-norman-mcp.yml
+- type: WellKnown
+  url: well-known/harvey-norman-well-known.yml
+- type: Hosts
+  url: hosts/harvey-norman-hosts.yml
+- type: Vendors
+  url: vendors/harvey-norman-vendors.yml
+- type: DomainSecurity
+  url: security/harvey-norman-domain-security.yml
 - type: Website
   url: https://harveynorman.com.au/
+- type: InvestorRelations
+  url: https://www.harveynormanholdings.com.au/
+- type: CompanyOverview
+  url: https://www.harveynormanholdings.com.au/pages/company-overview
+- type: Governance
+  url: https://www.harveynormanholdings.com.au/pages/governance
+- type: Support
+  url: https://www.harveynormanholdings.com.au/pages/contact
+- type: Careers
+  url: https://www.harveynormansupportcareers.com.au/hnso/en/listing/
+- type: PrivacyPolicy
+  url: https://www.harveynormanholdings.com.au/pages/privacy-policy
+
+apis: []
+
+x-coverage:
+  state: covered
+  reason: identity-verified
+  detail: Consumer site www.harveynorman.com.au returned an Imperva/hCaptcha "Pardon Our Interruption" interstitial (HTTP
+    200, 6183 bytes) to browser-UA GET and headless render on 2026-10-21; identity, image and pointers were taken from the
+    group corporate site harveynormanholdings.com.au, which names Harvey Norman Holdings Limited and its Harvey Norman trademark.
+    No developer portal or API docs found.
+  evidence:
+  - url: https://www.harveynorman.com.au/
+    status: 200
+  - url: https://www.harveynormanholdings.com.au/
+    status: 200
+  - url: https://www.harveynormanholdings.com.au/pages/company-overview
+    status: 200
+  - url: https://www.harveynormanholdings.com.au/pages/governance
+    status: 200
+  - url: https://www.harveynormanholdings.com.au/pages/contact
+    status: 200
+  - url: https://www.harveynormanholdings.com.au/pages/privacy-policy
+    status: 200
+  - url: https://www.harveynormansupportcareers.com.au/hnso/en/listing/
+    status: 200
+x-enrichment:
+  date: '2026-10-21'
+  status: enriched
+  artifacts_added: 10
+  pass: modular-v1
+  engine: identity=anthropic,contract=anthropic,surfaces=anthropic,docs=anthropic,regulatory=anthropic

@@ -1,0 +1,53 @@
+generated: '2026-10-21'
+method: searched
+source: https://www.harveynormanholdings.com.au/pages/privacy-policy
+signals:
+  data_subject_request:
+    url: https://www.harveynormanholdings.com.au/pages/privacy-policy
+    section: How can you access your personal information?
+    channel: written request by email or post to The Privacy Officer, A1 Richmond Road, Homebush West, NSW 2140
+    rights_named: [access, correction]
+    evidence:
+    - source: https://www.harveynormanholdings.com.au/pages/privacy-policy
+      http_status: 200
+      fetched: '2026-10-21'
+      quote: 'Usually we will be able to provide you with access to your personal information upon receipt of your written request, either by email sent to'
+    - source: https://www.harveynormanholdings.com.au/pages/privacy-policy
+      http_status: 200
+      fetched: '2026-10-21'
+      quote: 'There are some limited circumstances in which we may not be able to provide you with access to your personal information when requested.'
+    note: >-
+      An Australian Privacy Act (APP) access-and-correction right, exercised by written request to the
+      Privacy Officer with identity confirmation; the policy also has a "How can you seek to correct your
+      personal information?" section. No deletion or portability right and no response time are stated.
+      The email address is obfuscated on the page and is not reproduced here.
+  data_residency:
+    url: https://www.harveynormanholdings.com.au/pages/privacy-policy
+    section: Will we disclose your personal information to anyone overseas?
+    evidence:
+    - source: https://www.harveynormanholdings.com.au/pages/privacy-policy
+      http_status: 200
+      fetched: '2026-10-21'
+      quote: 'The countries to which we are most likely to send your personal information include New Zealand, United Kingdom, United States of America, Singapore, Malaysia, Croatia, Slovenia and Ireland.'
+    note: >-
+      A cross-border disclosure statement, not a residency commitment: data may leave Australia (e.g. servers
+      hosted outside Australia), subject to the policy's "Overseas Disclosure Obligations".
+  incident_notification:
+    url: https://www.harveynormanholdings.com.au/pages/privacy-policy
+    section: What if there is a breach in relation to my personal information?
+    evidence:
+    - source: https://www.harveynormanholdings.com.au/pages/privacy-policy
+      http_status: 200
+      fetched: '2026-10-21'
+      quote: 'Where required under the Act, we will notify you and the Office of the Australian Information Commissioner (“OAIC”) of the Data Breach.'
+    note: >-
+      Breach notification to affected individuals and the OAIC, conditioned on the Notifiable Data Breaches
+      scheme ("where required under the Act"), handled under a Data Breach Response Plan. No timeline stated.
+  data_retention:
+    url: https://www.harveynormanholdings.com.au/pages/privacy-policy
+    evidence:
+    - source: https://www.harveynormanholdings.com.au/pages/privacy-policy
+      http_status: 200
+      fetched: '2026-10-21'
+      quote: 'We take all necessary steps to destroy or permanently de-identify your personal information where it is no longer required and to protect your personal information from loss, misuse and interference and from unauthorised access, modification or disclosure.'
+    note: Purpose-bound retention (destroy or de-identify once no longer required); no retention periods are published.
